@@ -105,8 +105,8 @@ class TrellisNet(nn.Module):
         seq_len = X.size(2)
         h_size = self.h_size
 
-        self.ht = torch.zeros(batch_size, h_size, seq_len).cuda()
-        self.ct = torch.zeros(batch_size, h_size, seq_len).cuda()
+        self.ht = torch.zeros(batch_size, h_size, seq_len, device=X.device)
+        self.ct = torch.zeros(batch_size, h_size, seq_len, device=X.device)
         return torch.cat([X] + [self.ht], dim=1)     # "Injecting" input sequence at layer 1
 
     def step(self, Z, dilation=1, hc=None):
