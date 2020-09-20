@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
-from optimizations import weight_norm, VariationalDropout, VariationalHidDropout
+from trellisnet.optimizations import weight_norm, VariationalDropout, VariationalHidDropout
 
 __author__ = 'shaojieb'
 

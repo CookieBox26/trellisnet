@@ -3,8 +3,8 @@ import torch.nn.functional as F
 import torch
 import pickle
 
-from trellisnet import TrellisNet
-from optimizations import WeightDrop, embedded_dropout, VariationalDropout
+from trellisnet.trellisnet import TrellisNet
+from trellisnet.optimizations import WeightDrop, embedded_dropout, VariationalDropout
 
 
 class MixSoftmax(nn.Module):
